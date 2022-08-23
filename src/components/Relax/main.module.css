@@ -1,0 +1,29 @@
+.soundContainer {
+	display: flex;
+}
+
+.soundContainer:first {
+	margin-bottom: 20px;
+}
+
+/* for mobile */
+@media only screen and (max-width: 600px) {
+	.soundContainer {
+		flex-wrap: wrap;
+	}
+}
+
+.sideContent {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blink_me {
+	animation: blinker 5s ease-in infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}

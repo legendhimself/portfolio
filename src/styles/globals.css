@@ -1,0 +1,37 @@
+/* Use tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
+@font-face {
+	font-family: "JetBrains Mono";
+	src: url("/fonts/JetBrainsMono-Regular.ttf");
+}
+
+html,
+body {
+	overflow: none;
+	font-family: "JetBrains Mono", monospace;
+	background-color: theme("colors.epic-black");
+}
+
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.coolViews {
+	align-self: center;
+}
+
+::selection {
+	background-color: theme("colors.pastel.green");
+	color: #000;
+}

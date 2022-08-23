@@ -1,0 +1,123 @@
+.cardContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 200px;
+	height: 200px;
+	border-radius: 30px;
+	background: #fff;
+	box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.1);
+	margin: 20px;
+	transition: all 0.3s;
+	position: relative;
+	cursor: pointer;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.cardContainer.cardContainerActive {
+	background: linear-gradient(
+		to right bottom,
+		rgba(37, 216, 112, 0.7),
+		rgba(0, 153, 255, 0.7)
+	);
+}
+
+.iconContainer {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	transition: transform 0.2s;
+}
+
+.cardContainer:active {
+	transform: scale(0.95);
+}
+
+.sliderContainer {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.sliderMain {
+	width: 180px;
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sliderThumb {
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: #ebebeb;
+	font-size: 0px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sliderTrack {
+	background-color: rgba(255, 255, 255, 0.541);
+	height: 8px;
+	border-radius: 10px;
+}
+
+.sliderContainer.sliderContainerActive {
+	animation: sliderActive both 0.2s;
+	visibility: visible;
+}
+
+.icon.iconActive {
+	text-shadow: 0px 0px 100px red;
+	color: #fff;
+}
+
+.icon {
+	text-shadow: 0px 0px 100px #555;
+	color: #777;
+}
+
+.globalPaused {
+	opacity: 0.6;
+}
+
+@keyframes sliderActive {
+	0% {
+		visibility: visible;
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media only screen and (max-width: 870px) {
+	.cardContainer {
+		width: 160px;
+		height: 160px;
+	}
+}
+
+@media only screen and (max-width: 460px) {
+	.cardContainer {
+		width: 300px;
+		height: 120px;
+		margin: 15px;
+		box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.08);
+		border-radius: 25px;
+	}
+}
