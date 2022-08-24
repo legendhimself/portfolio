@@ -10,12 +10,12 @@ export const More: FC = () => {
 				{!useMediaQuery(1024) && (
 					<>
 						<motion.img
-							src={"./assets/doggo.png"}
-							className="w-80 rounded-lg my-auto mt-16 absolute bottom-0"
+							src={"./assets/cat.png"}
+							className="object-cover h-48 w-80 rounded-lg my-auto mt-16 absolute bottom-[130px]"
 							whileHover={{ scale: 1.25 }}
 						/>
 						<img
-							src={"./assets/cute_af_doggo.png"}
+							src={"./assets/cute_af_cat.png"}
 							className="w-20 h-20 rounded-lg -mt-8 ml-4 absolute left-[400px] 2xl:left-[530px] top-20"
 						/>
 					</>

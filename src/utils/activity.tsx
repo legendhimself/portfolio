@@ -41,11 +41,15 @@ const Status: FC = () => {
 			},
 			body: JSON.stringify({ id: "392779025803771904" }),
 		})
-			.then((res) => res.json())
+			.then((res) => (console.log(res), res.json()))
 			.then((data) => {
 				setData(data.data);
 				setLoading(false);
-			});
+			})
+			.catch(
+				// @ts-ignore
+				(e) => (setData(undefined), setLoading(false)),
+			);
 	}, []);
 
 	if (!interval) {
@@ -65,7 +69,11 @@ const Status: FC = () => {
 					data.data;
 					setData(data.data);
 					setLoading(false);
-				});
+				})
+				.catch(
+					// @ts-ignore
+					(e) => (setData(undefined), setLoading(false)),
+				);
 		}, 20000);
 		// clear interval for idle visitors
 		setTimeout(() => clearInterval(interval), 3 * 60 * 1000);
