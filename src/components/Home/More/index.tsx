@@ -58,11 +58,11 @@ export const More: FC = () => {
 				{useMediaQuery(767) && (
 					<div className="flex flex-row relative">
 						<img
-							src={"./assets/doggo.png"}
+							src={"./assets/cat.png"}
 							className="w-72 mt-16 rounded-lg mx-auto shadow-lg shadow-pastel-black flex flex-row"
 						/>
 						<img
-							src={"./assets/cute_af_doggo.png"}
+							src={"./assets/cute_af_cat.png"}
 							className="w-20 h-20 mt-16 rounded-lg mx-auto flex flex-row absolute right-6"
 						/>
 					</div>
