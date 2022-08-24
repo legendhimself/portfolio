@@ -41,7 +41,7 @@ const Status: FC = () => {
 			},
 			body: JSON.stringify({ id: "392779025803771904" }),
 		})
-			.then((res) => (console.log(res), res.json()))
+			.then((res) => res.json())
 			.then((data) => {
 				setData(data.data);
 				setLoading(false);

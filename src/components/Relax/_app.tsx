@@ -55,16 +55,12 @@ const AudioCard = (props: any) => {
 		}
 	}, []);
 	useEffect(() => {
-		// console.log(volume, audioTag.current.volume);
-		// audioTag.current.volume = volume / 100;
-		// @ts-ignore
-		console.log(appContext.isAudioPlaying, audio, audio?.src);
 		if (!appContext.isAudioPlaying) {
 			// @ts-ignore
 			audio.pause();
 		} else if (appContext.isAudioPlaying && active) {
 			// @ts-ignore
-			audio.play().catch((e) => console.log(e));
+			audio.play().catch((e) => null);
 		}
 		if (appContext.isResetSettings) {
 			resetSettings();
@@ -87,7 +83,7 @@ const AudioCard = (props: any) => {
 		if (audio) {
 			if (active && appContext.isAudioPlaying) {
 				// @ts-ignore
-				audio.play();
+				audio.play().catch((e) => null);
 			} else {
 				// @ts-ignore
 				audio.pause();
