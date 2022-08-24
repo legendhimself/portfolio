@@ -38,7 +38,7 @@ const links = [
 		name: "resume",
 		href: "/resume.pdf",
 		slash: "slash",
-		open: true,
+		open: false,
 		newTab: false,
 	},
 	{
