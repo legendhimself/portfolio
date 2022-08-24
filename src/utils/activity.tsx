@@ -111,7 +111,7 @@ const Status: FC = () => {
 	};
 
 	const getStatus = () => {
-		if (!isLoading) return "loading...";
+		if (isLoading) return "loading...";
 
 		if (!status || status == "offline") {
 			return "offline";
