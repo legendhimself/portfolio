@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useState, useEffect } from "react";
+// import LoadingScreen from "@components/Loader/index";
 
 interface activity {
 	id: string;
@@ -78,7 +79,7 @@ const Status: FC = () => {
 		// clear interval for idle visitors
 		setTimeout(() => clearInterval(interval), 3 * 60 * 1000);
 	}
-
+	// <LoadingScreen />;
 	if (isLoading) return <span>{"updating..."}</span>;
 
 	if (!data) return <span>{"unavailable."}</span>;
@@ -110,7 +111,7 @@ const Status: FC = () => {
 	};
 
 	const getStatus = () => {
-		if (isLoading) return "loading...";
+		if (!isLoading) return "loading...";
 
 		if (!status || status == "offline") {
 			return "offline";

@@ -66,6 +66,8 @@ export const About: FC = () => {
 					<img
 						className="inline"
 						src="https://counter9.stat.ovh/private/freecounterstat.php?c=bhznk59x7hkwn26ypq4pllg9kr2sy86u"
+						width={60}
+						height={14}
 					></img>
 				</div>
 			</div>
@@ -161,7 +163,7 @@ const MobileCodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 				className={`rounded-md mt-3 flex flex-row ${
 					logo == "typescript" ? "h-10 w-10 ml-3" : null
 				} ${logo == "java" ? "w-8 ml-4 mb-3" : null} ${
-					logo == "csharp" ? "w-10 ml-3 mb-3" : null
+					logo == "C++Logo" ? "w-10 ml-3 mb-3" : null
 				} ${
 					logo == "javascript"
 						? "h-10 w-10 ml-3 bg-pastel-yellow"
@@ -170,7 +172,7 @@ const MobileCodeComponent = ({ lang, level, logo }: ICodeComponent) => {
 			></img>
 			<p
 				className={`text-white flex flex-row my-auto ml-4 ${
-					logo == ("java" || "csharp") ? "ml-5" : null
+					logo == ("java" || "C++Logo") ? "ml-5" : null
 				}`}
 			>
 				{lang[0].toUpperCase() + lang.substring(1)}
@@ -215,7 +217,7 @@ const DesktopCodeComponent = ({ lang, level, logo, ikey }: ICodeComponent) => {
 				className={`rounded-md ${
 					logo == "typescript" ? "h-10 w-10 ml-3 my-auto" : null
 				} ${logo == "java" ? "w-8 ml-4" : null} ${
-					logo == "csharp" ? "w-10 ml-3" : null
+					logo == "C++Logo" ? "w-10 ml-3" : null
 				} ${
 					logo == "javascript"
 						? "h-10 w-10 ml-3 my-auto bg-pastel-yellow"
