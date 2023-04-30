@@ -45,21 +45,22 @@ export const Hero: FC = () => {
 					/>
 					,&nbsp;
 					<LanguageLink
+						name={"rust"}
+						href={"https://www.rust-lang.org/"}
+						color={"text-pastel-red"}
+					/>
+					,&nbsp;
+					<LanguageLink
 						name={"typescript"}
 						href={"https://www.typescriptlang.org/"}
 						color={"text-pastel-blurple"}
 					/>
-					,&nbsp;
+					&nbsp;and&nbsp;
+					<br />
 					<LanguageLink
 						name={"java"}
 						href={"https://www.java.com/"}
 						color={"text-pastel-orange"}
-					/>
-					&nbsp;and&nbsp;
-					<LanguageLink
-						name={"c#"}
-						href={"https://docs.microsoft.com/en-us/dotnet/csharp/"}
-						color={"text-pastel-pink"}
 					/>
 					<br />
 					<br />

@@ -80,6 +80,12 @@ export const About: FC = () => {
 						level={"w-full"}
 						logo={"javascript"}
 						ikey={0}
+					/>{" "}
+					<DesktopCodeComponent
+						lang={"Rust"}
+						logo={"Rustacean"}
+						level={"w-2/3"}
+						ikey={3}
 					/>
 					<DesktopCodeComponent
 						lang={"typescript"}
@@ -92,12 +98,6 @@ export const About: FC = () => {
 						logo={"java"}
 						level={"w-2/3"}
 						ikey={2}
-					/>
-					<DesktopCodeComponent
-						lang={"C++"}
-						logo={"C++Logo"}
-						level={"w-1/3"}
-						ikey={3}
 					/>
 				</div>
 			) : null}
@@ -217,7 +217,7 @@ const DesktopCodeComponent = ({ lang, level, logo, ikey }: ICodeComponent) => {
 				className={`rounded-md ${
 					logo == "typescript" ? "h-10 w-10 ml-3 my-auto" : null
 				} ${logo == "java" ? "w-8 ml-4" : null} ${
-					logo == "C++Logo" ? "w-10 ml-3" : null
+					logo == "Rustacean" ? "w-12 ml-3" : null
 				} ${
 					logo == "javascript"
 						? "h-10 w-10 ml-3 my-auto bg-pastel-yellow"
