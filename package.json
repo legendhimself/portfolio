@@ -10,15 +10,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/legendhimslef/webpage.git"
+		"url": "git+https://github.com/legendhimself/webpage.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/legendhimslef/webpage/issues"
+		"url": "https://github.com/legendhimself/webpage/issues"
 	},
-	"homepage": "https://github.com/legendhimslef/webpage#readme",
+	"homepage": "https://github.com/legendhimself/webpage#readme",
 	"description": "",
 	"dependencies": {
 		"@chakra-ui/react": "^2.2.1",

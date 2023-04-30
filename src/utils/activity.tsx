@@ -1,6 +1,11 @@
 import { FC } from "react";
 import { useState, useEffect } from "react";
 // import LoadingScreen from "@components/Loader/index";
+const development = process.env.NODE_ENV === "development";
+const url = development
+	? "http://localhost:3071/member/activity"
+	: "https://api.sofi.gg/member/activity";
+console.log(development, url);
 
 interface activity {
 	id: string;
@@ -34,7 +39,7 @@ const Status: FC = () => {
 
 	useEffect(() => {
 		setLoading(true);
-		fetch("https://api.sofi.gg/member/activity", {
+		fetch(url, {
 			method: "POST",
 			headers: {
 				Accept: "application/json",
@@ -49,7 +54,10 @@ const Status: FC = () => {
 			})
 			.catch(
 				// @ts-ignore
-				(e) => (setData(undefined), setLoading(false)),
+				(e) => {
+					console.log(e);
+					return setData(null), setLoading(false);
+				},
 			);
 	}, []);
 
@@ -73,9 +81,12 @@ const Status: FC = () => {
 				})
 				.catch(
 					// @ts-ignore
-					(e) => (setData(undefined), setLoading(false)),
+					(e) => {
+						console.log(e);
+						return setData(null), setLoading(false);
+					},
 				);
-		}, 20000);
+		}, 5000);
 		// clear interval for idle visitors
 		setTimeout(() => clearInterval(interval), 3 * 60 * 1000);
 	}

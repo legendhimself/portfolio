@@ -10,7 +10,7 @@ export const Footer: FC = () => {
 				<div className="mx-auto my-auto text-2xl flex flex-row">
 					<motion.div
 						onClick={() => {
-							window.open("https://github.com/legendhimslef");
+							window.open("https://github.com/legendhimself");
 						}}
 						whileHover={{ y: -5 }}
 						className="transition-colors ease-in-out hover:text-pastel-green"

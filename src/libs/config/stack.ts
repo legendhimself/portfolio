@@ -21,7 +21,7 @@ export const STACK = [
 	{
 		name: "Github",
 		logo: "github.png",
-		href: "https://github.com/legendhimslef",
+		href: "https://github.com/legendhimself",
 		hoverColor: "hover:bg-pastel-pink",
 	},
 	{
