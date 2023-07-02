@@ -49,7 +49,7 @@ export const About: FC = () => {
 						and{" "}
 						<span
 							onClick={() => {
-								window.open("https://joinflatshare.com");
+								window.open("https://sofi.gg");
 								return false;
 							}}
 							className="hover:cursor-pointer text-pastel-red underline hover:no-underline"
