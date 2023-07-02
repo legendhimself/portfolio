@@ -103,29 +103,29 @@ export const About: FC = () => {
 
 			{useMediaQuery(768) ? (
 				<div className="flex flex-col w-full bg-epic-black pt-10">
-					<MobileCodeComponent
+					<DesktopCodeComponent
 						lang={"javascript"}
 						level={"w-full"}
 						logo={"javascript"}
 						ikey={0}
+					/>{" "}
+					<DesktopCodeComponent
+						lang={"Rust"}
+						logo={"Rustacean"}
+						level={"w-2/3"}
+						ikey={3}
 					/>
-					<MobileCodeComponent
+					<DesktopCodeComponent
 						lang={"typescript"}
 						level={"w-2/3"}
 						logo={"typescript"}
 						ikey={1}
 					/>
-					<MobileCodeComponent
+					<DesktopCodeComponent
 						lang={"java"}
 						logo={"java"}
 						level={"w-2/3"}
 						ikey={2}
-					/>
-					<MobileCodeComponent
-						lang={"C++"}
-						logo={"C++Logo"}
-						level={"w-1/3"}
-						ikey={3}
 					/>
 				</div>
 			) : null}

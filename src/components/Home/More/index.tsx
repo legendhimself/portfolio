@@ -38,22 +38,12 @@ export const More: FC = () => {
 					Not in front of my <Highlight>IDE</Highlight>?
 				</h1>
 				<p className="mt-4">
-					You will most likely find me playing{" "}
-					<Highlight>Valorant</Highlight>, petting my cat, or&nbsp;
-					<span
-						onClick={() =>
-							window.open(
-								"https://www.youtube.com/watch?v=YfVt_jMaaKk",
-							)
-						}
-						className="hover:cursor-pointer text-pastel-green underline hover:no-underline"
-					>
+					I go touch some <Highlight>Grass</Highlight>, petting my
+					cat, or&nbsp;
+					<span className="hover:cursor-pointer text-pastel-green underline hover:no-underline">
 						reading a book
 					</span>
 					.<br />
-					<br />I also play a lot of nothing with my no friend. I
-					dedicate most of my time for coding these days. Trying to
-					get more skills.
 				</p>
 				{useMediaQuery(767) && (
 					<div className="flex flex-row relative">

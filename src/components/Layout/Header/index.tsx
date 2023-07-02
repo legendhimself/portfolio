@@ -158,13 +158,17 @@ const ContactButton = () => {
 		<>
 			<button
 				className="invisible md:visible
-						flex flex-row justify-center items-center 
-						text-white text-xl 
-						ml-auto hover:cursor-default"
-				onClick={() =>
-					(window.location.href =
-						"https://hidemyemail.cc/4d850d315b2f4b6aa4eb1cd7ab48182c")
-				}
+    			flex flex-row justify-center items-center 
+    			text-white text-xl 
+    			ml-auto hover:cursor-pointer"
+				onClick={() => {
+					const email = "contact@voxelli.me";
+					const subject = "Your Inquiry"; // You can customize the subject
+					const body = "Hello Voxelli!"; // You can customize the default email body
+					window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+						subject,
+					)}&body=${encodeURIComponent(body)}`;
+				}}
 			>
 				<motion.div
 					whileHover={{
