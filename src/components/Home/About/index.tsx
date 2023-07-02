@@ -25,9 +25,8 @@ export const About: FC = () => {
 					<p className="text-white text-md">
 						I'm a self-taught, <Highlight>full-stack</Highlight>{" "}
 						developer, that went headfirst into coding and fell in
-						love with the first lines of code I've written!
-						Currently Pursuing B.E. in <Highlight>IT</Highlight>. I
-						like to{" "}
+						love with the first lines of code I've written! I like
+						to{" "}
 						<Highlight>
 							Code, Design, Innovate and Experiment
 						</Highlight>
